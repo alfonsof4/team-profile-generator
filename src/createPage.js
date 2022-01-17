@@ -8,7 +8,7 @@ function generateSlides(team) {
         const teamArray = team[i];
         switch(teamArray.getRole()) {
             case 'Manager':
-                const manager = new Manager(teamArray.id, teamArray.email, teamArray.officeNumber);
+                const manager = new Manager(teamArray.id, teamArray.name, teamArray.email, teamArray.officeNumber);
                 slides.push(generateManagerSlide(manager));
                 break;
             case 'Engineer':
@@ -29,7 +29,7 @@ let generateManagerSlide = (Manager) => {
     <div class="slide m-1 shadow" style="width: 18rem">
         <div class='slide-header'>
             <h3 class="slide-title>${Manager.getName()}</h3>
-            <h5 class=slide-text><i class="fa fa-laptop"></i> ${Manager.getRole()}</h5>
+            <h6 class=slide-text><i class="fa fa-laptop"></i> ${Manager.getRole()}</h6>
         </div>
         <div class="slide-body">
             <ul class="list-group list-group-flush">
@@ -47,7 +47,7 @@ let generateEngineerSlide = (Engineer) => {
     <div class="slide m-1 shadow" style="width: 18rem">
         <div class='slide-header'>
             <h3 class="slide-title>${Engineer.getName()}</h3>
-            <h5 class=slide-text><i class="fa fa-laptop"></i> ${Engineer.getRole()}</h5>
+            <h6 class=slide-text><i class="fa fa-laptop"></i> ${Engineer.getRole()}</h6>
         </div>
         <div class="slide-body">
             <ul class="list-group list-group-flush">
@@ -65,7 +65,7 @@ let generateInternSlide = (Intern) => {
     <div class="slide m-1 shadow" style="width: 18rem">
         <div class='slide-header'>
             <h3 class="slide-title>${Intern.getName()}</h3>
-            <h5 class=slide-text><i class="fa fa-laptop"></i> ${Intern.getRole()}</h5>
+            <h6 class=slide-text><i class="fa fa-laptop"></i> ${Intern.getRole()}</h6>
         </div>
         <div class="slide-body">
             <ul class="list-group list-group-flush">
